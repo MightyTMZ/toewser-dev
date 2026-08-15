@@ -176,7 +176,7 @@ export default function Home() {
         <section className="border-t border-neutral-200">
           <div className="mx-auto max-w-5xl px-6 py-16">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Why engineers reach for it
+              We solve the pain points of building with language models
             </h2>
             <div className="mt-8 overflow-x-auto">
               <table className="w-full min-w-[640px] border-collapse text-left">
@@ -211,10 +211,6 @@ export default function Home() {
             <h2 className="text-2xl font-semibold tracking-tight">
               &ldquo;Where does my data go?&rdquo;
             </h2>
-            <p className="mt-3 max-w-2xl text-neutral-600">
-              Here&rsquo;s exactly what stays on your machine and what we collect.
-              No hidden telemetry.
-            </p>
 
             <div className="mt-8 grid gap-10 sm:grid-cols-2">
               <div>
@@ -237,15 +233,6 @@ export default function Home() {
         {/* Bottom CTA */}
         <section className="border-t border-neutral-200">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 px-6 py-20 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight">
-                Get out of your own way.
-              </h2>
-              <p className="mt-2 text-neutral-600">
-                Describe what you want in plain English. Hit run. Get back to
-                building.
-              </p>
-            </div>
             <div className="flex items-center gap-2 border border-neutral-900 bg-neutral-900 px-4 py-3 font-mono text-sm text-white">
               <span>$ {INSTALL_CMD}</span>
               <CopyButton
@@ -259,8 +246,7 @@ export default function Home() {
 
       <footer className="border-t border-neutral-200">
         <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-2 px-6 py-8 text-sm text-neutral-500 sm:flex-row sm:items-center">
-          <span>toewser - provider-agnostic ETL for LLM pipelines</span>
-          <span className="font-mono text-xs">/ˈteɪzər/</span>
+          <span>toewser - provider-agnostic AI for ETL and database seeding</span>
         </div>
       </footer>
     </div>
