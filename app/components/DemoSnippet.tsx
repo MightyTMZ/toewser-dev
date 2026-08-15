@@ -57,19 +57,37 @@ const DemoSnippet = () => {
         </div>
       </div>
       <pre className="overflow-x-auto px-4 py-4 font-mono text-sm leading-7 text-neutral-800">
-        <span className="text-neutral-400">from</span>
+        <span className="text-blue-600">from</span>
         {" toewser.core "}
-        <span className="text-neutral-400">import</span>
-        {" Toewser"}
+        <span className="text-blue-600">import</span>
+        {" Toewser\n"}
+        <span className="text-blue-600">import</span>
+        {" os"}
+        {"\n\n"}
+        {"seed_prompt = "}
+        <span className="text-emerald-600">
+        {"\"\"\""}
+        {"\n"}
+        {"Generate trivia questions on the geography of the world."}
+        {"The schema of each row is:\n- question: string\n- answer: string\n- difficulty: one of \"easy\", \"medium\", or \"hard\"\n\nQuestions should be factually correct, diverse, and avoid duplicates."}
+        {"\n"}
+        {"\"\"\""}
+        </span>
         {"\n\n"}
         {"toewser = "}
         <span className="text-neutral-900 font-medium">Toewser</span>
         {"(\n    model="}
         <span className="text-red-600">&quot;{model}&quot;</span>
-        {",\n    model_api_key=API_KEY,\n    db_client=bigquery_client,\n)\n"}
-        {"toewser.populate(prompt=prompt, table_name="}
+        {",\n    model_api_key=os.environ.get("}
+        <span className="text-red-600">&quot;YOUR_API_KEY&quot;</span>
+        {"),\n    db_client=bigquery_client,\n)\n"}
+        {"toewser."}
+        <span className="text-blue-900">{"populate"}</span>
+        {"(prompt=seed_prompt, table_name="}
         <span className="text-red-600">&quot;trivia.questions&quot;</span>
-        {", rows=1500)"}
+        {", rows="}
+        <span className="text-green-700">{"1500"}</span>
+        {")"}
       </pre>
     </div>
   )
