@@ -121,8 +121,8 @@ export default function Home() {
               Seed a database in as little as 7 lines
             </h2>
             <p className="mt-3 max-w-2xl text-neutral-600">
-              Toewser uses an LLM of your choice to understand context so the data it produces actually makes
-              sense for your schema.
+              Toewser uses a language model of your choice to understand context so the data it produces actually makes
+              sense for your schema. We orchestrate the model, your database, and your prompt so you can focus on building instead of rewriting.
             </p>
             <div className="mt-8">
               <DemoSnippet />
