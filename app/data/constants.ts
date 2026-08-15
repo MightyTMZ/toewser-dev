@@ -1,3 +1,13 @@
+export const PROVIDERS = [
+    "anthropic",
+    "deepseek/openai",
+    "deepseek/anthropic",
+    "groq",
+    "xai",
+    "ollama",
+    "openai",
+]
+
 export const OPENAI_MODELS = [
     "gpt-5.6-sol",
     "gpt-5.6-terra",
@@ -53,7 +63,7 @@ export const GROQ_MODELS = [
     "qwen/qwen3.6-27b",
 ]
 
-export const GROK_MODELS = [
+export const XAI_MODELS = [
     "grok-4.6",
 ]
 
@@ -191,3 +201,14 @@ export const OLLAMA_MODELS = [
     "kimi-k3",
     "nemotron-3.5-lightning",
 ]
+
+
+export const PROVIDERS_LIST_MAP = {
+    "anthropic": ANTHROPIC_MODELS,
+    "deepseek/openai": DEEPSEEK_MODELS,
+    "deepseek/anthropic": DEEPSEEK_MODELS,
+    "groq": GROQ_MODELS,
+    "xai": XAI_MODELS,
+    "ollama": OLLAMA_MODELS,
+    "openai": OPENAI_MODELS,
+};
