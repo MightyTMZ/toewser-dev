@@ -61,7 +61,7 @@ export default function Home() {
           <div className="flex items-baseline gap-3">
             <span className="text-lg font-semibold tracking-tight">toewser</span>
             <span className="hidden font-mono text-xs text-neutral-500 sm:inline">
-              like &ldquo;taser&rdquo;
+              like &ldquo;tazer&rdquo;
             </span>
           </div>
           <div className="flex items-center gap-2">
