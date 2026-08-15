@@ -23,7 +23,7 @@ export default function CopyButton({
     <button
       type="button"
       onClick={handleCopy}
-      className={`shrink-0 border border-neutral-300 px-3 py-1.5 text-xs font-medium tracking-wide text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900 ${className}`}
+      className={`shrink-0 border border-neutral-300 px-3 py-1.5 text-xs font-medium tracking-wide text-light-700 transition-colors hover:border-neutral-900 hover:text-neutral-900 ${className}`}
     >
       {copied ? "Copied" : label}
     </button>
