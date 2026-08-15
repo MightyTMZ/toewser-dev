@@ -68,13 +68,17 @@ export default function Home() {
             Provider-agnostic ETL &amp; synthetic data
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-            Stop rewriting your pipeline every time a provider changes.
+            Spend less time migrating between AI models
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
             Toewser is a provider-agnostic ETL and seed-data library. Switch between
-            OpenAI, Anthropic, Gemini, Groq, and Ollama by changing 1–4 lines of
-            code, and generate contextually-aware synthetic data with plain-English
-            prompts instead of brittle seed scripts.
+            <strong style={{ color: "#0fa67d" }}> OpenAI</strong>, 
+            <strong style={{ color: "#d97757"}}> Anthropic</strong>, 
+            <strong style={{ color: "#5385d4" }}> Google</strong>, 
+            <strong style={{ color: "#000000" }}> xAI</strong>, 
+            <strong style={{ color: "#f43e01" }}> Groq</strong>, 
+            <strong style={{ color: "#737373" }}> Ollama </strong> 
+            by changing only 1–4 lines of code
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -88,7 +92,7 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-3 text-sm text-neutral-500">
-            No signup. No login. No tracking cookies. No sales call to see a demo.
+            Open source Python library
           </p>
         </section>
 
