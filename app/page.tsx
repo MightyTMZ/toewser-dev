@@ -4,13 +4,11 @@ import DemoSnippet from "./components/DemoSnippet";
 
 const INSTALL_CMD = "pip install toewser";
 
-const ONBOARDING_PROMPT = `Install toewser in this repo. Take into account he code env and also
+const ONBOARDING_PROMPT = `Install toewser in this project. 
+Carefully examine how the code environment is set up and how project dependencies are managed.
 
-Ask me which LLM provider I want to use
-(OpenAI, Anthropic, Gemini, Groq, or local Ollama) and where my API key
-lives, then write a starter script that seeds a table matching the schema
-in this project with realistic synthetic data. Don't run it until I
-confirm the provider, model, and row count.`;
+Ask me which LLM provider I want to use (OpenAI, Anthropic, Gemini, Groq, or local Ollama) and where my API key lives, 
+then write a starter script for my use case. Don't run it until I confirm it.`;
 
 const PAIN_POINTS = [
   {
@@ -63,7 +61,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       <main className="flex-1">
         {/* Hero */}
         <section className="mx-auto max-w-5xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
@@ -95,6 +92,30 @@ export default function Home() {
           </p>
         </section>
 
+        {/* Agent onboarding */}
+        <section className="border-t border-neutral-200">
+          <div className="mx-auto max-w-5xl px-6 py-16">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Onboard with your AI agent
+            </h2>
+            <p className="mt-3 max-w-2xl text-neutral-600">
+              Paste this into Claude Code, Codex, or your AI agent of choice and it will install Toewser, 
+              ask which provider you want, your goal, and write a starter script for your use case.
+            </p>
+            <div className="mt-8 border border-neutral-200 bg-neutral-50">
+              <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-2">
+                <span className="font-mono text-xs text-neutral-500">
+                  Claude Code prompt
+                </span>
+                <CopyButton text={ONBOARDING_PROMPT} />
+              </div>
+              <pre className="overflow-x-auto whitespace-pre-wrap px-4 py-4 font-mono text-sm leading-7 text-neutral-800">
+                {ONBOARDING_PROMPT}
+              </pre>
+            </div>
+          </div>
+        </section>
+
         {/* Two audiences */}
         <section className="border-t border-neutral-200">
           <div className="mx-auto grid max-w-5xl gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-16">
@@ -118,7 +139,7 @@ export default function Home() {
         <section className="border-t border-neutral-200">
           <div className="mx-auto max-w-5xl px-6 py-16">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Seed a database in as little as 7 lines
+              Seed your database in as little as <span className="text-red-600">7</span> lines + a prompt
             </h2>
             <p className="mt-3 max-w-2xl text-neutral-600">
               Toewser uses a language model of your choice to understand context so the data it produces actually makes
@@ -209,30 +230,6 @@ export default function Home() {
                   ))}
                 </dl>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Claude Code onboarding */}
-        <section className="border-t border-neutral-200">
-          <div className="mx-auto max-w-5xl px-6 py-16">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              Onboard with an agent instead of docs
-            </h2>
-            <p className="mt-3 max-w-2xl text-neutral-600">
-              Paste this into Claude Code and it will install Toewser, ask which
-              provider you want, and write a starter script scoped to your schema.
-            </p>
-            <div className="mt-8 border border-neutral-200 bg-neutral-50">
-              <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-2">
-                <span className="font-mono text-xs text-neutral-500">
-                  Claude Code prompt
-                </span>
-                <CopyButton text={ONBOARDING_PROMPT} />
-              </div>
-              <pre className="overflow-x-auto whitespace-pre-wrap px-4 py-4 font-mono text-sm leading-7 text-neutral-800">
-                {ONBOARDING_PROMPT}
-              </pre>
             </div>
           </div>
         </section>
