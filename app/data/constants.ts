@@ -6,6 +6,7 @@ export const PROVIDERS = [
     "xai",
     "ollama",
     "openai",
+    "google",
 ]
 
 export const OPENAI_MODELS = [
@@ -202,6 +203,13 @@ export const OLLAMA_MODELS = [
     "nemotron-3.5-lightning",
 ]
 
+export const GOOGLE_MODELS = [
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+]
+
 
 export const PROVIDERS_LIST_MAP = {
     "anthropic": ANTHROPIC_MODELS,
@@ -211,4 +219,5 @@ export const PROVIDERS_LIST_MAP = {
     "xai": XAI_MODELS,
     "ollama": OLLAMA_MODELS,
     "openai": OPENAI_MODELS,
+    "google": GOOGLE_MODELS,
 };
