@@ -1,17 +1,8 @@
 import DotGrid from "./components/DotGrid";
 import CopyButton from "./components/CopyButton";
+import DemoSnippet from "./components/DemoSnippet";
 
 const INSTALL_CMD = "pip install toewser";
-
-const SEED_SNIPPET = `from toewser.core import Toewser
-import os
-
-toewser = Toewser(
-    model="openai/gpt-4.1",
-    model_api_key=os.environ.get("OPENAI_API_KEY"),
-    db_client=bigquery_client,
-)
-toewser.populate(prompt=prompt, table_name="trivia.questions", rows=1500)`;
 
 const ONBOARDING_PROMPT = `Install toewser in this repo. Take into account he code env and also
 
@@ -133,26 +124,8 @@ export default function Home() {
               Toewser uses an LLM of your choice to understand context so the data it produces actually makes
               sense for your schema.
             </p>
-            <div className="mt-8 overflow-x-auto border border-neutral-200 bg-neutral-50">
-              <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-2">
-                <span className="font-mono text-xs text-neutral-500">seed.py</span>
-                <CopyButton text={SEED_SNIPPET} />
-              </div>
-              <pre className="overflow-x-auto px-4 py-4 font-mono text-sm leading-7 text-neutral-800">
-                <span className="text-neutral-400">from</span>
-                {" toewser.core "}
-                <span className="text-neutral-400">import</span>
-                {" Toewser"}
-                {"\n\n"}
-                {"toewser = "}
-                <span className="text-neutral-900 font-medium">Toewser</span>
-                {"(\n    model="}
-                <span className="text-red-600">&quot;openai/gpt-4.1&quot;</span>
-                {",\n    model_api_key=API_KEY,\n    db_client=bigquery_client,\n)\n"}
-                {"toewser.populate(prompt=prompt, table_name="}
-                <span className="text-red-600">&quot;trivia.questions&quot;</span>
-                {", rows=1500)"}
-              </pre>
+            <div className="mt-8">
+              <DemoSnippet />
             </div>
 
             <p className="mt-10 text-neutral-600">
@@ -289,7 +262,7 @@ export default function Home() {
 
       <footer className="border-t border-neutral-200">
         <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-2 px-6 py-8 text-sm text-neutral-500 sm:flex-row sm:items-center">
-          <span>toewser — provider-agnostic ETL for LLM pipelines</span>
+          <span>toewser - provider-agnostic ETL for LLM pipelines</span>
           <span className="font-mono text-xs">/ˈteɪzər/</span>
         </div>
       </footer>
