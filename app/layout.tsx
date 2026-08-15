@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toewser — Provider-agnostic ETL for LLM pipelines",
+  title: "Toewser - Provider-agnostic ETL for LLM pipelines",
   description:
     "Replace hundreds of lines of provider-specific SDK code with a 10-line script. Switch between OpenAI, Anthropic, Gemini, Groq, and Ollama by changing 1-4 lines. Generate contextually-aware synthetic data and seed a database in 7 lines.",
 };
